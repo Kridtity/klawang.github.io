@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Kridtity Lawang",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Kridtity Lawang",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

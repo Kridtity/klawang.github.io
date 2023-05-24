@@ -1,4 +1,6 @@
+//Import other SASS files
 @import "config";
+@import "menu";
 
 * {
     box-sizing: border-box;
@@ -15,7 +17,7 @@ body {
 }
 
 h1,
-s h2,
+h2,
 h3 {
     margin: 0;
     font-weight: 400;

@@ -1,13 +1,16 @@
+//Declare CSS vars
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.7;
 
+//Transition mixin for fading effects used in the project
 @mixin easeOut {
     transition: all 0.5s ease-out;
 }
 
+//If show home image is true, show home image with trasnlucent color over it
 @mixin background {
     @if $show-home-image {
         &#bg-img {
@@ -26,5 +29,30 @@ $background-opacity: 0.7;
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+//Media queries (fetch screen size of viewing device for specific CSS execution
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
     }
 }

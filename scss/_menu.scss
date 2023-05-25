@@ -1,4 +1,5 @@
 .menu-btn {
+    //Burger menu CSS
     position: absolute;
     z-index: 3;
     right: 35px;
@@ -49,6 +50,7 @@
         visibility: visible;
     }
 
+    //Common CSS to both protrait and menu list
     &-branding,
     &-nav {
         display: flex;
@@ -61,6 +63,7 @@
         overflow: hidden;
     }
 
+    //CSS to style whole menu list
     &-nav {
         margin: 0;
         padding: 0;
@@ -74,6 +77,7 @@
         }
     }
 
+    //Portrait photo in menu CSS
     &-branding {
         background: $primary-color;
         transform: translate3d(0, 100%, 0);
@@ -92,6 +96,7 @@
         }
     }
 
+    //CSS for containing class of menu links (class referring to HTML list item containing link values)
     .nav-item {
         transform: translate3d(600px, 0, 0);
         @include easeOut;
@@ -105,6 +110,7 @@
         }
     }
 
+    //Styling for link items
     .nav-link {
         display: inline-block;
         position: relative;
@@ -122,6 +128,7 @@
     }
 }
 
+//Menu links horizontal slide-in effect
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.1s;
